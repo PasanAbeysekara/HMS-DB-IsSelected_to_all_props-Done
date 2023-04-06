@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using HMS.MVVM.Model;
+using HMS.MVVM.Model.Authentication;
 using Prism.Commands;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,9 @@ using System.Windows;
 
 namespace HMS.MVVM.ViewModel
 {
-	public partial class AddDoctorWindowVM:ObservableObject, ICloseWindows
+
+
+	public partial class AddUserWindowVM : ObservableObject, ICloseWindows
 	{
 
 		// #begin for ICloseWindows
@@ -19,10 +22,21 @@ namespace HMS.MVVM.ViewModel
 		// #end
 
 		[ObservableProperty]
-		public string name;
+		public string userName;
 
 		[ObservableProperty]
-		public double fee;
+		public string userPassword;
+
+
+		private bool[] _modeArray = new bool[] { true, false, false };
+		public bool[] ModeArray
+		{
+			get { return _modeArray; }
+		}
+		public int SelectedMode
+		{
+			get { return Array.IndexOf(_modeArray, true); }
+		}
 
 		private DelegateCommand _closeCommand;
 		public DelegateCommand CloseCommand =>
@@ -41,15 +55,14 @@ namespace HMS.MVVM.ViewModel
 		{
 			using (DataContext context = new DataContext())
 			{
-				context.Doctors.Add(new Doctor { Name= "Dr. "+Name, Fee = Fee});
+				context.Users.Add(new User ( UserName,UserPassword, ModeArray[0] ));
 				context.SaveChanges();
 			}
-
-			MessageBox.Show("Please click 'Refresh' to see the updated Doctor list 😊");
+			MessageBox.Show("Please click 'Refresh' to see the updated User list 😊");
 			Close?.Invoke();
 		}
 
-		public AddDoctorWindowVM()
+		public AddUserWindowVM()
 		{
 		}
 

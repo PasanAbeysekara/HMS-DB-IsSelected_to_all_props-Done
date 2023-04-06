@@ -10,6 +10,7 @@
   <ItemGroup>
     <None Remove="Images\appointment.jpg" />
     <None Remove="Images\appointment2.png" />
+    <None Remove="Images\drug.png" />
     <None Remove="Images\hosp.png" />
     <None Remove="Images\hosp2.png" />
     <None Remove="Images\hospital.png" />
@@ -39,6 +40,7 @@
   <ItemGroup>
     <Resource Include="Images\appointment.jpg" />
     <Resource Include="Images\appointment2.png" />
+    <Resource Include="Images\drug.png" />
     <Resource Include="Images\hosp.png" />
     <Resource Include="Images\hosp2.png" />
     <Resource Include="Images\hospital.png" />

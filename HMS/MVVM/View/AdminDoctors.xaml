@@ -20,7 +20,7 @@
             <Button Style="{StaticResource pagingButton}" Margin="540 0" Click="AddMemberButton_Click">
                 <StackPanel Orientation="Horizontal">
                     <icon:PackIconMaterial Kind="Plus" Style="{StaticResource menuButtonIcon}" Margin="10 5"/>
-                    <TextBlock Text="Add New Patient" VerticalAlignment="Center"/>
+                    <TextBlock Text="Add New Doctor" VerticalAlignment="Center"/>
                 </StackPanel>
             </Button>
         </StackPanel>

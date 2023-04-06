@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HMS.MVVM.View.Doctors;
+using HMS.MVVM.View.Drugs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,11 @@ namespace HMS.MVVM.View
 		public AdminDrugs()
 		{
 			InitializeComponent();
+		}
+		private void AddMemberButton_Click(object sender, RoutedEventArgs e)
+		{
+			var window = new AddDrugWindow();
+			window.Show();
 		}
 	}
 }

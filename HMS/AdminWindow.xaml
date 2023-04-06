@@ -145,12 +145,12 @@
                 </TextBlock>
 
                 <!--Add Button-->
-                <Button Style="{StaticResource addButton}" Click="AddMemberButton_Click">
+                <!--<Button Style="{StaticResource addButton}" Click="AddMemberButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <icon:PackIconMaterial Kind="Plus" VerticalAlignment="Center" Width="11" Margin="0 1 8 0" Height="11"/>
                         <TextBlock Text="Add New Patient"/>
                     </StackPanel>
-                </Button>
+                </Button>-->
 
                 <!--Sparator-->
                 <Separator Height="1" Grid.Row="3" Background="#dae2ea" Margin="0 -1 0 10"/>

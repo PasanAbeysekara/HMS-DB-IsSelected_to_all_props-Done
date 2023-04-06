@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using HMS.MVVM.Model;
+using HMS.MVVM.Model.InsidePrescription;
 using Prism.Commands;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using System.Windows;
 
 namespace HMS.MVVM.ViewModel
 {
-	public partial class AddDoctorWindowVM:ObservableObject, ICloseWindows
+	public partial class AddDrugWindowVM : ObservableObject, ICloseWindows
 	{
 
 		// #begin for ICloseWindows
@@ -19,10 +20,10 @@ namespace HMS.MVVM.ViewModel
 		// #end
 
 		[ObservableProperty]
-		public string name;
+		public string tradeName;
 
 		[ObservableProperty]
-		public double fee;
+		public string genericName;
 
 		private DelegateCommand _closeCommand;
 		public DelegateCommand CloseCommand =>
@@ -41,15 +42,14 @@ namespace HMS.MVVM.ViewModel
 		{
 			using (DataContext context = new DataContext())
 			{
-				context.Doctors.Add(new Doctor { Name= "Dr. "+Name, Fee = Fee});
+				context.Drugs.Add(new Drug { TradeName = tradeName, GenericName = GenericName });
 				context.SaveChanges();
 			}
-
-			MessageBox.Show("Please click 'Refresh' to see the updated Doctor list 😊");
+			MessageBox.Show("Please click 'Refresh' to see the updated Drug list 😊");
 			Close?.Invoke();
 		}
 
-		public AddDoctorWindowVM()
+		public AddDrugWindowVM()
 		{
 		}
 

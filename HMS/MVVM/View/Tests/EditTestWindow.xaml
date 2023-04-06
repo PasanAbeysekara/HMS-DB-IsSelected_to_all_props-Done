@@ -148,9 +148,7 @@
 
         <Border Grid.Column="1" Padding="20" Background="#ffffff" CornerRadius="0 25 25 0" MouseDown="Border_MouseDown" >
             <Grid>
-                <Image Source="/Images/closeicon.png" Width="25" Margin="0 4 5 0" Style="{StaticResource iconApp}"/>
-                <Image Source="/Images/minimizeicon.png" Width="25" Margin="0,4,40,0" Style="{StaticResource iconApp}"/>
-
+                
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 10 0 0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="150"/>

@@ -1,21 +1,20 @@
-﻿<Window x:Class="HMS.MVVM.View.Users.EditUserWindow"
+﻿<Window x:Class="HMS.MVVM.View.Tests.AddTestWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:HMS.MVVM.View.Users"
+        xmlns:local="clr-namespace:HMS.MVVM.View.Tests"
         xmlns:fa="http://schemas.fontawesome.io/icons/"
         xmlns:uc="clr-namespace:HMS.MVVM.View.UserControls"
         xmlns:vm="clr-namespace:HMS.MVVM.ViewModel"
         mc:Ignorable="d"
-        Title="Edit Doctor" Height="650" Width="1000"
+        Title="Add Patient" Height="650" Width="1000"
         Background="Transparent"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         AllowsTransparency="True">
-    
     <Window.DataContext>
-        <vm:EditUserWindowVM/>
+        <vm:AddTestWindowVM/>
     </Window.DataContext>
 
     <Window.Resources>
@@ -148,9 +147,8 @@
 
         <Border Grid.Column="1" Padding="20" Background="#ffffff" CornerRadius="0 25 25 0" MouseDown="Border_MouseDown" >
             <Grid>
-                
+               
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 10 0 0">
-                    
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="150"/>
                         <ColumnDefinition Width="150"/>
@@ -163,17 +161,14 @@
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock Grid.Row="0" Text="User Name" Style="{StaticResource text}" Margin="0 10 0 10"/>
-                    <TextBlock Grid.Row="1" Text="User Password" Style="{StaticResource text}" Margin="0 10 0 10"/>
-                    <TextBlock Grid.Row="2" Text="Account Type" Style="{StaticResource text}" Margin="0 10 0 10"/>
+                    <TextBlock Grid.Row="0" Text="Test Name" Style="{StaticResource text}" Margin="0 10 0 10"/>
+                    <TextBlock Grid.Row="1" Text="Test Fee (LKR)" Style="{StaticResource text}" Margin="0 10 0 10"/>
+                    <TextBlock Grid.Row="2" Text="Description" Style="{StaticResource text}" Margin="0 10 0 10"/>
 
-                    <TextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBoxStyle}" Text="{Binding UserName,UpdateSourceTrigger=PropertyChanged}" Margin="0 10 0 10"/>
-                    <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBoxStyle}" Text="{Binding UserPassword,UpdateSourceTrigger=PropertyChanged}" Margin="0 10 0 10"/>
-                    <!--<ComboBox Grid.Column="1" Grid.Row="2" Style="{StaticResource ComboBoxStyle}" SelectedItem="{Binding Gender}" ItemsSource="{Binding Genders,Mode=OneWay}" Margin="0 4 0 4"/>-->
-                    <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center">
-                        <RadioButton Content="Admin" Margin="0 10 10 10" GroupName="Mode" IsChecked="{Binding Path=ModeArray[0], Mode=TwoWay}"/>
-                        <RadioButton Content="Regular" Margin="10" GroupName="Mode" IsChecked="{Binding Path=ModeArray[1], Mode=TwoWay}"/>
-                    </StackPanel>
+                    <TextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBoxStyle}" Text="{Binding TestName,UpdateSourceTrigger=PropertyChanged}" Margin="0 10 0 10"/>
+                    <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBoxStyle}" Text="{Binding TestName,UpdateSourceTrigger=PropertyChanged}" Margin="0 10 0 10"/>
+                    <TextBox Grid.Column="1" Grid.Row="2" Style="{StaticResource TextBoxStyle}" Text="{Binding Description,UpdateSourceTrigger=PropertyChanged}" Margin="0 10 0 10"/>
+
 
                     <Grid Grid.Column="1" Grid.Row="3" Margin="0 40 0 0">
                         <Grid.ColumnDefinitions>

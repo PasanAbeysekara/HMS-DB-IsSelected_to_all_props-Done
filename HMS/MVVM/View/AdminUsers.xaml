@@ -13,28 +13,42 @@
         <vm:AdminUsersVM/>
     </UserControl.DataContext>
 
-    <DataGrid Style="{DynamicResource DataGridStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" IsReadOnly="True"
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Refresh" Width="100" Style="{StaticResource pagingButton}" Command="{Binding RefreshListCommand}"/>
+            <Button Style="{StaticResource pagingButton}" Margin="555 0" Click="AddMemberButton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <icon:PackIconMaterial Kind="Plus" Style="{StaticResource menuButtonIcon}" Margin="10 5"/>
+                    <TextBlock Text="Add New User" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <DataGrid Style="{DynamicResource DataGridStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" IsReadOnly="True"
                               RowStyle="{DynamicResource DataGridRowStyle1}" Grid.Row="5" ItemsSource="{Binding UsersData}" AutoGenerateColumns="False">
-        <DataGrid.Columns>
-            <DataGridTextColumn Binding="{Binding UserId}" Header="# ID"/>
-            <DataGridTextColumn Binding="{Binding UserName}" Header="User Name"/>
-            <DataGridTextColumn Binding="{Binding Password}" Header="Password"/>
-            <DataGridTextColumn Binding="{Binding IsSuperUser}" Header="Is Admin"/>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding UserId}" Header="# ID"/>
+                <DataGridTextColumn Binding="{Binding UserName}" Header="User Name"/>
+                <DataGridTextColumn Binding="{Binding Password}" Header="Password"/>
+                <DataGridTextColumn Binding="{Binding IsSuperUser}" Header="Is Admin"/>
 
-            <DataGridTemplateColumn Width="140">
-                <DataGridTemplateColumn.CellTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <Button Command="{Binding DataContext.EditUserCommand,ElementName=adminUsers_window}" CommandParameter="{Binding}" Style="{StaticResource actionButton}">
-                                <icon:PackIconMaterial Kind="AccountEdit" Style="{StaticResource actionButtonIcon}"/>
-                            </Button>
-                            <Button Command="{Binding DataContext.DeleteUserCommand,ElementName=adminUsers_window}" CommandParameter="{Binding}" Style="{StaticResource actionButton}">
-                                <icon:PackIconMaterial Kind="Delete" Style="{StaticResource actionButtonIcon}"/>
-                            </Button>
-                        </StackPanel>
-                    </DataTemplate>
-                </DataGridTemplateColumn.CellTemplate>
-            </DataGridTemplateColumn>
-        </DataGrid.Columns>
-    </DataGrid>
+                <DataGridTemplateColumn Width="140">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Command="{Binding DataContext.EditUserCommand,ElementName=adminUsers_window}" CommandParameter="{Binding}" Style="{StaticResource actionButton}">
+                                    <icon:PackIconMaterial Kind="AccountEdit" Style="{StaticResource actionButtonIcon}"/>
+                                </Button>
+                                <Button Command="{Binding DataContext.DeleteUserCommand,ElementName=adminUsers_window}" CommandParameter="{Binding}" Style="{StaticResource actionButton}">
+                                    <icon:PackIconMaterial Kind="Delete" Style="{StaticResource actionButtonIcon}"/>
+                                </Button>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </StackPanel>
+
+
 </UserControl>
