@@ -163,7 +163,7 @@
             <Border  Padding="10" Background="#ffffff" MouseDown="Border_MouseDown" CornerRadius="0 25 25 0">
                 <StackPanel>
                     <TextBlock Text="{Binding Caption}" Background="AliceBlue" TextAlignment="Center" FontWeight="SemiBold" FontSize="28" Foreground="#363636"/>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 10 0 0">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="left" Margin="20 10 0 0">
                         <TextBlock Text="Prescribed Date" Style="{StaticResource text}" Margin="0 0 20 0"/>
                         <DatePicker Grid.Column="1" Grid.Row="2" SelectedDateFormat="Long" SelectedDate="{Binding PrescribedDate,Mode=TwoWay}" Style="{StaticResource datePicker}"/>
                     </StackPanel>

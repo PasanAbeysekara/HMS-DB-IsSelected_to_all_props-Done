@@ -26,7 +26,7 @@
             </Button>
         </StackPanel>
         <DataGrid Style="{DynamicResource DataGridStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" IsReadOnly="True"
-                              RowStyle="{DynamicResource DataGridRowStyle1}" Grid.Row="5" ItemsSource="{Binding DrugsData}" AutoGenerateColumns="False">
+                              RowStyle="{DynamicResource DataGridRowStyle1}" Grid.Row="5" ItemsSource="{Binding DrugsData}" AutoGenerateColumns="False" MaxHeight="380">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Id}" Header="# ID"/>
                 <DataGridTextColumn Binding="{Binding GenericName}" Header="Generic Name"/>

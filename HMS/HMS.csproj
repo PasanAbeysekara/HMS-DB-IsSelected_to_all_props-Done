@@ -14,6 +14,7 @@
     <None Remove="Images\hosp.png" />
     <None Remove="Images\hosp2.png" />
     <None Remove="Images\hospital.png" />
+    <None Remove="Images\hospitalLogo.png" />
     <None Remove="Images\patient.png" />
     <None Remove="Images\patientInfo.png" />
     <None Remove="Images\prescription.png" />
@@ -22,6 +23,7 @@
 
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
+    <PackageReference Include="FontAwesome.Sharp" Version="6.3.0" />
     <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
     <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="4.11.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />
@@ -44,6 +46,7 @@
     <Resource Include="Images\hosp.png" />
     <Resource Include="Images\hosp2.png" />
     <Resource Include="Images\hospital.png" />
+    <Resource Include="Images\hospitalLogo.png" />
     <Resource Include="Images\patient.png" />
     <Resource Include="Images\patientInfo.png" />
     <Resource Include="Images\prescription.png" />

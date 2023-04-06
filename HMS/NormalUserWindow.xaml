@@ -43,7 +43,7 @@
                                 CornerRadius="100" DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20 -30 0 0">
                             <Ellipse>
                                 <Ellipse.Fill>
-                                    <ImageBrush ImageSource="/Images/hosp.png"/>
+                                    <ImageBrush ImageSource="/Images/hospitalLogo.png"/>
                                 </Ellipse.Fill>
                             </Ellipse>
                         </Border>

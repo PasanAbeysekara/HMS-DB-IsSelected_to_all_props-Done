@@ -12,6 +12,7 @@
                 <ResourceDictionary Source="Themes/LoginTheme.xaml"/>
                 <ResourceDictionary Source="Themes/DashboardTheme.xaml"/>
                 <ResourceDictionary Source="Themes/AddPatientTheme.xaml"/>
+                <ResourceDictionary Source="Themes/DashboardTabTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <!--Normal User-->
